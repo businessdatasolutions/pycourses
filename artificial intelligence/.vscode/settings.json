@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "env/bin/python",
+    "python.pythonPath": "/Users/witoldtenhove/Documents/Projects/m3dm/pycourses/artificial intelligence/env/bin/python3.7",
     "jupyter.jupyterServerType": "local"
 }
