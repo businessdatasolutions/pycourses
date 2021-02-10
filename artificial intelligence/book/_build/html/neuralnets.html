@@ -88,25 +88,20 @@
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <ul class="nav sidenav_l1">
  <li class="toctree-l1">
-  <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+  <a class="reference internal" href="preface.html">
+   Preface
   </a>
  </li>
 </ul>
 <ul class="current nav sidenav_l1">
  <li class="toctree-l1 current active collapsible-parent">
-  <a class="reference internal" href="content.html">
-   Content in Jupyter Book
+  <a class="reference internal" href="chapter1.html">
+   Learning Algorithms
   </a>
   <ul class="current collapse-ul">
    <li class="toctree-l2">
-    <a class="reference internal" href="markdown.html">
-     Markdown Files
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="supervised.html">
-     Supervised Learning
+    <a class="reference internal" href="unsupervised.html">
+     Unsupervised Learning
     </a>
    </li>
    <li class="toctree-l2">
@@ -179,11 +174,11 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/businessdatasolutions/pycourses"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fneuralnets.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/businessdatasolutions/pycourses/issues/new?title=Issue%20on%20page%20%2Fneuralnets.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -204,13 +199,18 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/neuralnets.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/businessdatasolutions/pycourses/master?urlpath=tree/artificial intelligence/neuralnets.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
                     alt="Interact on binder">Binder</button></a>
         
         
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/businessdatasolutions/pycourses/blob/master/artificial intelligence/neuralnets.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
         
         
     </div>
@@ -230,7 +230,9 @@
                 
   <div class="section" id="neural-networks">
 <h1>Neural Networks<a class="headerlink" href="#neural-networks" title="Permalink to this headline">¶</a></h1>
-<div class="cell docutils container">
+<p>Watch this video:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<hr><div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -288,10 +290,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x18d56bf28&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x18de25748&gt;]
 </pre></div>
 </div>
-<img alt="_images/neuralnets_5_1.png" src="_images/neuralnets_5_1.png" />
+<img alt="_images/neuralnets_6_1.png" src="_images/neuralnets_6_1.png" />
 </div>
 </div>
 <div class="math notranslate nohighlight">
@@ -345,10 +347,10 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18d660748&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18df1c828&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_10_1.png" src="_images/neuralnets_10_1.png" />
+<img alt="_images/neuralnets_11_1.png" src="_images/neuralnets_11_1.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -370,10 +372,10 @@ deg=2 | MSE=2.31258
 deg=3 | MSE=0.00000
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18d6d9a90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18df70668&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_11_2.png" src="_images/neuralnets_11_2.png" />
+<img alt="_images/neuralnets_12_2.png" src="_images/neuralnets_12_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -408,10 +410,10 @@ round=4 | MSE=0.13193
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>round=5 | MSE=0.09568
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e08ef28&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e130fd0&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_12_4.png" src="_images/neuralnets_12_4.png" />
+<img alt="_images/neuralnets_13_4.png" src="_images/neuralnets_13_4.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -440,10 +442,10 @@ deg=13 | MSE=0.22989
 deg=15 | MSE=0.21672
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18dfc30b8&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e86f898&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_13_2.png" src="_images/neuralnets_13_2.png" />
+<img alt="_images/neuralnets_14_2.png" src="_images/neuralnets_14_2.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -510,10 +512,10 @@ _________________________________________________________________
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>round=7 | MSE=0.09517
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e3ed240&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e9f8be0&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_14_9.png" src="_images/neuralnets_14_9.png" />
+<img alt="_images/neuralnets_15_9.png" src="_images/neuralnets_15_9.png" />
 </div>
 </div>
 </div>

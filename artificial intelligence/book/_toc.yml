@@ -1,10 +1,9 @@
 # Table of content
 # Learn more at https://jupyterbook.org/customize/toc.html
 #
-- file: intro
-- file: content
+- file: preface
+- file: chapter1
   sections:
-    - file: markdown
-    - file: supervised
+    - file: unsupervised
     - file: reinforcement
     - file: neuralnets
