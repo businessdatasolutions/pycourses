@@ -4,30 +4,32 @@
 
 ## Prerequisites
 
-Before starting this module make sure you have:
+:::{admonition} Before starting this module make sure you have:
+:class: attention
 
 - an installed [Python](https://www.python.org/downloads/) environment
 - an IDE: [VSCode](https://code.visualstudio.com), [PyCharm](https://www.jetbrains.com/pycharm/)
 - a [Colab](https://colab.research.google.com/) account
 - succesfully completed the modules Data Mining and Modeling
+  :::
 
 ## Purpose of this course
 
-The general learning outcome of this course is:
-
-> The student is able to perform a well-defined task independently in a relatively clearly arranged situation, or is able to perform in a complex and unpredictable situation under supervision.
+```{admonition} The general learning outcome of this course is:
+The student is able to perform a well-defined task independently in a relatively clearly arranged situation, or is able to perform in a complex and unpredictable situation under supervision.
+```
 
 This course will provide you with an introduction to deep learning (DL) algorithms and their applications for intelligent systems and devices. The focus will be mainly on experimenting and testing with several DL systems in order to understand their basic functioning.
 
-For a successful completion of the course, a student has:
-
+```{admonition} For a successful completion of the course, a student has:
 - examined the concept of Artificial Intelligence and its relationships with all relevant related paradigms
 - conducted experiments with various applications for AI (Vision, Audio, Language)
 - designed a demo or prototype for an AI application
+```
 
 ## Structure of the course
 
-Through the whole of the program you'll be cooperating within a team where on different aassigments. At the end of the course you will present with your team what you have learned from analyzing and comparing the different case studies.
+Through the whole of the program you'll be cooperating within a team working on different assigments. At the end of the course you will present with your team what you have learned from analyzing and comparing the different case studies.
 
 # About the author
 

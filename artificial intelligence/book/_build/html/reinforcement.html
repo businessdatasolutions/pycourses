@@ -222,6 +222,20 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example">
+   An example
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -233,19 +247,31 @@
 <h1>Reinforcement Learning<a class="headerlink" href="#reinforcement-learning" title="Permalink to this headline">¶</a></h1>
 <p>Watch this video:</p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kopoLzvh5jY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<hr><div class="cell docutils container">
+<hr><div class="hint admonition">
+<p class="admonition-title">Assignments:</p>
+<ol class="simple">
+<li><p><em>Individual</em> – Find a real-life business application of reinforcement learning</p></li>
+<li><p><em>Team</em> – Gather all applications and discuss what the shared characteristics are</p></li>
+<li><p><em>Team</em> – Develop a concept for a new application that is based on reinforcement learning</p></li>
+</ol>
+</div>
+<div class="section" id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<p>We will have the computer play a coin tossing game. The coin is biased and lands 80% of time on heads. First we’ll let the computer bet randomly.</p>
+<p>We will start by defining the state space which tells what the possible states of the coin can be (1 = heads, 0 = tails). We’ll do the same for the action space which is the set of possible bets (1 = bet on heads, 0 = bet on tails).</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">ssp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
+<span class="n">asp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 </div>
+<p>Next we’ll define a function <code class="docutils literal notranslate"><span class="pre">epoch()</span></code> that plays the game a hundred times and let it run 15 times. As expected the average reward is around 50.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ssp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">asp</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-
-<span class="k">def</span> <span class="nf">epoch</span><span class="p">():</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">epoch</span><span class="p">():</span>
     <span class="n">tr</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
         <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">asp</span><span class="p">)</span>
@@ -260,7 +286,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([52, 53, 60, 53, 46, 49, 49, 51, 44, 51, 49, 45, 61, 55, 55])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([48, 54, 45, 44, 41, 45, 48, 46, 45, 52, 43, 55, 42, 49, 51])
 </pre></div>
 </div>
 </div>
@@ -272,11 +298,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>51.53
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>47.2
 </pre></div>
 </div>
 </div>
 </div>
+<p>Now we’ll let the computer remember the states of the dice by adding them to the action set each time a game has been played.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">epoch</span><span class="p">():</span>
@@ -296,7 +323,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([77, 58, 60, 60, 67, 68, 72, 84, 60, 65, 72, 76, 54, 64, 63])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([67, 71, 68, 63, 58, 63, 65, 61, 69, 65, 64, 57, 65, 74, 72])
 </pre></div>
 </div>
 </div>
@@ -308,9 +335,16 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.67
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.47
 </pre></div>
 </div>
+</div>
+</div>
+<div class="hint admonition">
+<p class="admonition-title">Assignments:</p>
+<ul class="simple">
+<li><p><em>Individual</em> – Try to change the parameters and understand the mechanics of the separate functions</p></li>
+</ul>
 </div>
 </div>
 </div>

@@ -5,6 +5,14 @@ Watch this video:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <hr>
 
+:::{admonition} Assignments:
+:class: hint
+
+1. *Individual* -- Find a real-life business application of neural networks
+2. *Team* -- Gather all applications and discuss what the shared characteristics are
+3. *Team* -- Develop a concept for a new application that is based on neural networks
+:::
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
