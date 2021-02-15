@@ -21,7 +21,7 @@ The student is able to perform a well-defined task independently in a relatively
 
 This course will provide you with an introduction to deep learning (DL) algorithms and their applications for intelligent systems and devices. The focus will be mainly on experimenting and testing with several DL systems in order to understand their basic functioning.
 
-```{admonition} For a successful completion of the course, a student has:
+```{seealso} For a successful completion of the course, a student has:
 - examined the concept of Artificial Intelligence and its relationships with all relevant related paradigms
 - conducted experiments with various applications for AI (Vision, Audio, Language)
 - designed a demo or prototype for an AI application
