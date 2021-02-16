@@ -21,4 +21,4 @@ There are three main types of machine learning algorithms:
 
 <hr>
 
-In the next few paragraphs we will briefly look at some algorithms for unsupervised and reinforcement learning and provide some coding examples. Through the remainder of the course we will mainly work with neural networks for supervised learning. In the last paragraph we'll introduce neural networks and see how they perform compared to traditional methods.
+In the next few paragraphs we will briefly look at a few algorithms for unsupervised and reinforcement learning and provide some coding examples. Through the remainder of the course we will mainly work with neural networks for supervised learning. In the last paragraph we'll introduce neural networks and see how they perform compared to traditional methods.

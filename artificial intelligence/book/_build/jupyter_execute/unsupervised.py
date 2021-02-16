@@ -17,7 +17,7 @@ Watch this video:
 
 ## An example
 
-We will be using the k-means clustering algorithm to illustrate the functioning of unsupervised learning. The flowing code will generate some random clustered data. It has two dimension, $x$ and $y$.
+We will be using the k-means clustering algorithm to illustrate the functioning of unsupervised learning. The following code will generate some random clustered data. It has two dimension, $x$ and $y$.
 
 import numpy as np
 import pandas as pd

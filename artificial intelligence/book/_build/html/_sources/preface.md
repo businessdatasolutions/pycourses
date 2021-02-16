@@ -22,14 +22,50 @@ The student is able to perform a well-defined task independently in a relatively
 This course will provide you with an introduction to deep learning (DL) algorithms and their applications for intelligent systems and devices. The focus will be mainly on experimenting and testing with several DL systems in order to understand their basic functioning.
 
 ```{admonition} For a successful completion of the course, a student has:
-- examined the concept of Artificial Intelligence and its relationships with all relevant related paradigms
-- conducted experiments with various applications for AI (Vision, Audio, Language)
-- designed a demo or prototype for an AI application
+:class: seealso
+1. explored the concept of Artificial Intelligence and its relationships with all relevant related paradigms
+2. experimented with various applications for AI (Vision, Audio, Language)
+3. designed a demo or prototype for an AI application
 ```
 
 ## Structure of the course
 
-Through the whole of the program you'll be cooperating within a team working on different assigments. At the end of the course you will present with your team what you have learned from analyzing and comparing the different case studies.
+```{list-table} Course plan
+:header-rows: 1
+:name: course-plan
+:widths: 5 15 5 30
+
+* - WK
+  - Activity
+  - LO
+  - Topics
+* - 1
+  - Onboarding
+  -
+  - Python, online environments, IDEs, programming and runnig code
+* - 2
+  - Exploration
+  - 1
+  - From supervised to deep learning, overfitting
+* - 3
+  - Experiment
+  - 2
+  - Teachable Machines, computer vision, audio recognition, NLP/NLU
+* - 4
+  - Experiment
+  - 2
+  - Teachable Machines, computer vision, audio recognition, NLP/NLU
+* - 5
+  - Design
+  - 3
+  - Human centered AI, design thinking, systems thinking, ethics, biases
+* - 6
+  - Demonstration
+  - 3
+  - Human centered AI, design thinking, systems thinking, ethics, biases
+```
+
+Through the whole of the program you'll be cooperating within a team working towards a concept for an a AI application. At the end of the course you and your team will demonstrate a working prototype of the AI application.
 
 # About the author
 
