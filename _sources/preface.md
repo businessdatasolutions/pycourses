@@ -42,7 +42,7 @@ This course will provide you with an introduction to deep learning (DL) algorith
 * - 1
   - Onboarding
   -
-  - Python, online environments, IDEs, programming and runnig code
+  - Python, online environments, IDEs, programming and running code
 * - 2
   - Exploration
   - 1
