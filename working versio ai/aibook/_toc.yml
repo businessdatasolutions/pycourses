@@ -1,0 +1,13 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+- file: preface
+- file: chapter1
+  sections:
+    - file: unsupervised
+    - file: reinforcement
+    - file: neuralnets
+- file: ai-experiments
+  sections:
+    - file: tfvision
+- file: ai-design
