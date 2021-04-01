@@ -42,7 +42,7 @@ rl
 
 round(rl.mean(), 2)
 
-Now we'll let the computer remember the states of the dice by adding them to the action set each time a game has been played.
+Now we'll let the computer remember the states of the coin by adding them to the action set each time a game has been played.
 
 def epoch():
     tr = 0

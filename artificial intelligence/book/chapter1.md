@@ -6,10 +6,14 @@ There are three main types of machine learning algorithms:
 
 - _Supervised learning (SL):_
   These are algorithms that learn from a set of features (inputs) and corresponding labels (output). For instance a computer receives a set of foto's that are labeled either as 'orange' or 'apple' and is trained to distinguish between the two types of fruit.
-  <br>
 - _Unsupervised learning (UL):_
   These algorithms learn from a set of features (inputs) only with the goal to discover patterns. For instance a computer receives a set of documents and is asked to find sets of different topics.
-  <br>
+  <hr>
+
+  ![](images/superunsuper.gif)
+
+  <hr>
+
 - _Reinforcement learning (RL):_
   The algorithms learn from rewards and punishment while taking actions. For instance a computer can be trained to play a computer game.
 
