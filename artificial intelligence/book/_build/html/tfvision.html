@@ -251,26 +251,10 @@
 <h1>Tensorflow Vision example<a class="headerlink" href="#tensorflow-vision-example" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow.keras</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
+<span class="kn">import</span> <span class="nn">tensorflow.keras</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageOps</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling eager execution
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling v2 tensorshape
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling resource variables
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling tensor equality
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling control flow v2
 </pre></div>
 </div>
 </div>
@@ -298,11 +282,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;models/keras_model.h5&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
 </pre></div>
 </div>
 </div>
@@ -371,6 +350,27 @@
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.99929035 0.00070961]]
 </pre></div>
 </div>
+</div>
+</div>
+<div class="tabbed-set docutils">
+<input checked="checked" id="647ee2ff-5ba8-4ab9-b071-7ef308aedbf0" name="67d369cc-dd9c-4d08-bcfe-72bfe81e5852" type="radio">
+</input><label class="tabbed-label" for="647ee2ff-5ba8-4ab9-b071-7ef308aedbf0">
+A histogram</label><div class="tabbed-content docutils">
+<div class="figure align-default" id="fig-boot-tab" style="width: 300px">
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: !</span><a class="headerlink" href="#fig-boot-tab" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<input id="7274e263-86bc-4a42-85fa-ed7f95061def" name="67d369cc-dd9c-4d08-bcfe-72bfe81e5852" type="radio">
+</input><label class="tabbed-label" for="7274e263-86bc-4a42-85fa-ed7f95061def">
+A table</label><div class="tabbed-content docutils">
+<div class="figure align-default" id="tbl-df-tab" style="width: 300px">
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df-tab" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<input id="00a9677d-ab21-4713-a26b-00fb928f806f" name="67d369cc-dd9c-4d08-bcfe-72bfe81e5852" type="radio">
+</input><label class="tabbed-label" for="00a9677d-ab21-4713-a26b-00fb928f806f">
+Code to generate this</label><div class="tabbed-content docutils">
+<p><code class="docutils literal notranslate"><span class="pre">{</span> <span class="pre">code</span> <span class="pre">block</span> <span class="pre">here</span> <span class="pre">}</span></code></p>
 </div>
 </div>
 </div>
