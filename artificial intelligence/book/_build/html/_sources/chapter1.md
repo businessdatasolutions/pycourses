@@ -1,7 +1,5 @@
 # Learning Algorithms
 
-=======================
-
 There are three main types of machine learning algorithms:
 
 - _Supervised learning (SL):_

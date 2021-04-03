@@ -38,28 +38,7 @@ normalized_image_array = (image_array.astype(np.float32) / 127.0) - 1
 data[0] = normalized_image_array
 
 # run the inference
+# labels are 0 -> apple and 1 -> tangerine
 prediction = model.predict(data)
 print(prediction)
-
-````{tabbed} A histogram
-```{glue:figure} boot_fig
-:figwidth: 300px
-:name: "fig-boot-tab"
-
-This is a **caption**, with an embedded `{glue:text}` element: {glue:text}`boot_mean:.2f`!
-```
-````
-
-````{tabbed} A table
-```{glue:figure} df_tbl
-:figwidth: 300px
-:name: "tbl:df-tab"
-
-A caption for a pandas table.
-```
-````
-
-````{tabbed} Code to generate this
-`{ code block here }`
-````
 
