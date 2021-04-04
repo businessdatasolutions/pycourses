@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "env/bin/python3.9",
+    "python.pythonPath": "/Users/witoldtenhove/opt/anaconda3/envs/tensorflow/bin/python",
     "jupyter.jupyterServerType": "local"
 }
