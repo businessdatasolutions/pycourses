@@ -251,26 +251,10 @@
 <h1>Tensorflow Vision example<a class="headerlink" href="#tensorflow-vision-example" title="Permalink to this headline">¶</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">tensorflow.keras</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%capture</span>
+<span class="kn">import</span> <span class="nn">tensorflow.keras</span>
 <span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageOps</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling eager execution
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling v2 tensorshape
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling resource variables
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling tensor equality
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling control flow v2
 </pre></div>
 </div>
 </div>
@@ -298,11 +282,6 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Load the model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">tensorflow</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;models/keras_model.h5&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>WARNING:tensorflow:No training configuration found in the save file, so the model was *not* compiled. Compile it manually.
 </pre></div>
 </div>
 </div>
@@ -362,6 +341,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># run the inference</span>
+<span class="c1"># labels are 0 -&gt; apple and 1 -&gt; tangerine</span>
 <span class="n">prediction</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">prediction</span><span class="p">)</span>
 </pre></div>
@@ -415,7 +395,7 @@
         
             &copy; Copyright 2021.<br/>
           <div class="extra_footer">
-            <li class="toc-logo"><a href="https://www.businessdatasolutions.nl/" target="blank"><img src="https://github.com/businessdatasolutions/pycourses/blob/main/logo-name.png?raw=true" width="200"></a></li>
+            <div class="toc-logo"><a href="https://www.businessdatasolutions.nl/" target="blank"><img src="https://github.com/businessdatasolutions/pycourses/blob/main/logo-name.png?raw=true" width="200"></a></div>
           </div>
       </p>
     </div>

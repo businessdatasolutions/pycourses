@@ -241,6 +241,21 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show">
             
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i>
+            Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#an-example">
+   An example
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
         </div>
     </div>
 </div>
@@ -251,9 +266,25 @@
                 
   <div class="section" id="neural-networks">
 <h1>Neural Networks<a class="headerlink" href="#neural-networks" title="Permalink to this headline">¶</a></h1>
-<p>Watch this video:</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aircAruvnKk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<hr><div class="hint admonition">
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Watch</span> <span class="n">this</span> <span class="n">video</span><span class="p">:</span>
+
+<span class="o">&lt;</span><span class="n">iframe</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://www.youtube.com/embed/aircAruvnKk&quot;</span> <span class="n">frameborder</span><span class="o">=</span><span class="s2">&quot;0&quot;</span> <span class="n">allow</span><span class="o">=</span><span class="s2">&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture&quot;</span> <span class="n">allowfullscreen</span><span class="o">&gt;&lt;/</span><span class="n">iframe</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-1-a2b09d15af82&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">Watch</span> <span class="n">this</span> <span class="n">video</span><span class="p">:</span>
+             <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="hint admonition">
 <p class="admonition-title">Assignments:</p>
 <ol class="simple">
 <li><p><em>Individual</em> – Find a real-life business application of neural networks</p></li>
@@ -261,36 +292,36 @@
 <li><p><em>Team</em> – Develop a concept for a new application that is based on neural networks</p></li>
 </ol>
 </div>
+<div class="section" id="an-example">
+<h2>An example<a class="headerlink" href="#an-example" title="Permalink to this headline">¶</a></h2>
+<p>We will start with a regression problem where we know the model. We’ll generate some outcomes and investigate how well the computer can recreate the model based on some data set with examples. But first we need to install some packages we will need during this chapter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">768</span><span class="n">cca492cf2</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>INFO:tensorflow:Enabling eager execution
+INFO:tensorflow:Enabling v2 tensorshape
+INFO:tensorflow:Enabling resource variables
+INFO:tensorflow:Enabling tensor equality
+INFO:tensorflow:Enabling control flow v2
 </pre></div>
 </div>
 </div>
 </div>
+<p>The model we are trying to recreate is defined by the following function.</p>
 <div class="math notranslate nohighlight">
 \[
    f:\mathbb R \to \mathbb R, \ y = 2x^2 - \frac{1}{3}x^3
 \]</div>
+<p>Such a function transform some input values <span class="math notranslate nohighlight">\(x_1, x_2, .... x_N\)</span> into corresponding values <span class="math notranslate nohighlight">\(y_1, y_2, .... y_N\)</span>. Let’s calculate 25 values between -2 and +4:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
@@ -333,13 +364,25 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x1866cdfd0&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fc0242aa290&gt;]
 </pre></div>
 </div>
-<img alt="_images/neuralnets_7_1.svg" src="_images/neuralnets_7_1.svg" /></div>
+<img alt="_images/neuralnets_8_1.png" src="_images/neuralnets_8_1.png" />
 </div>
+</div>
+<p>Let’s first try to fit a simple linear model our data. For this we need to estimate the parameters  <span class="math notranslate nohighlight">\( \alpha \)</span> anfd <span class="math notranslate nohighlight">\( \beta \)</span> in the following function.
+$<span class="math notranslate nohighlight">\(
+f:\mathbb R \to \mathbb R, \ y = \alpha + \beta * x
+\)</span>$</p>
+<p>To obtain them we can use the following equations, where the bars on the variables indicate sample mean values.</p>
 <div class="math notranslate nohighlight">
-\[    f:\mathbb R \to \mathbb R, \ y = \alpha + \beta * x\]</div>
+\[
+\beta^* = \frac{Cov(x,y)}{Var(x)}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\alpha^* = \bar{y} - \beta\bar{x}
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">ddof</span><span class="o">=</span><span class="mi">0</span><span class="p">)[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">var</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
@@ -380,6 +423,7 @@
 </div>
 </div>
 </div>
+<p>We can now use these calculated values for <span class="math notranslate nohighlight">\(\alpha\)</span> and  <span class="math notranslate nohighlight">\(\beta\)</span> to try and fit a line to our sample data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sample data&#39;</span><span class="p">)</span>
@@ -389,11 +433,13 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x186850908&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc02439f410&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_12_1.svg" src="_images/neuralnets_12_1.svg" /></div>
+<img alt="_images/neuralnets_14_1.png" src="_images/neuralnets_14_1.png" />
 </div>
+</div>
+<p>The model does not seem to follow the data very well. You probably anticipated this disappointing result as we were trying to fit a linear line to a polynomial function. In Python we can use the function <code class="docutils literal notranslate"><span class="pre">polyfit()</span></code> to try different degrees of polynomials. As you can see using a degree of 1 results in our basic linear models we estimated earlier.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;sample data&#39;</span><span class="p">)</span>
@@ -413,11 +459,13 @@ deg=2 | MSE=2.31258
 deg=3 | MSE=0.00000
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x188272748&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc02419fcd0&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_13_2.svg" src="_images/neuralnets_13_2.svg" /></div>
+<img alt="_images/neuralnets_16_2.png" src="_images/neuralnets_16_2.png" />
 </div>
+</div>
+<p>In this case a polynomial function of degree 3 appears fit the sample data perfectly. But what if we didn’t want to make asumptions about the form of the relationship. Then neural networks could be useful. Neural nets can approximate a wide range of functional relationships. Prior knowledge of the form of the relationship is generally not required. For our example we are going to use tensorflow and keras to implement a neural network which can train on our sample data. This will be done in five rounds, where after each round the neural net is updated. Each round is plotted and so we can follow the model as it gradually improves. The result is not perfect, but still quite good. Especially taking into consideration the simplicity of the algorithm.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">tf</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">set_seed</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
@@ -442,15 +490,17 @@ deg=3 | MSE=0.00000
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>round=1 | MSE=3.87256
 round=2 | MSE=0.92527
 round=3 | MSE=0.28527
-round=4 | MSE=0.13193
+round=4 | MSE=0.13191
 round=5 | MSE=0.09568
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18e467550&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc025ace910&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_14_2.svg" src="_images/neuralnets_14_2.svg" /></div>
+<img alt="_images/neuralnets_18_2.png" src="_images/neuralnets_18_2.png" />
 </div>
+</div>
+<p>As mentioned earlier, a neural net is form agnostic. So we could practically give it any data and it would mostly find an appropriate model. Let’s try this with a sample of randomly generated data points and first apply a regression model to it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -477,11 +527,13 @@ deg=13 | MSE=0.22989
 deg=15 | MSE=0.21672
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18eca1160&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc025a8a090&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_15_2.svg" src="_images/neuralnets_15_2.svg" /></div>
+<img alt="_images/neuralnets_20_2.png" src="_images/neuralnets_20_2.png" />
 </div>
+</div>
+<p>As expected the polynomial model does a poor job fitting to the data. Now we’ll train a neural net and see whether it can generate a good fitting model.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
@@ -523,19 +575,26 @@ Total params: 198,145
 Trainable params: 198,145
 Non-trainable params: 0
 _________________________________________________________________
-round=1 | MSE=0.12663
-round=2 | MSE=0.08440
-round=3 | MSE=0.14496
-round=4 | MSE=0.06024
-round=5 | MSE=0.03803
-round=6 | MSE=0.01164
-round=7 | MSE=0.09517
+round=1 | MSE=0.13428
+round=2 | MSE=0.08515
+round=3 | MSE=0.05811
+round=4 | MSE=0.04389
+round=5 | MSE=0.03376
+round=6 | MSE=0.00722
+round=7 | MSE=0.00644
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x18ed69978&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.legend.Legend at 0x7fc0263f66d0&gt;
 </pre></div>
 </div>
-<img alt="_images/neuralnets_16_2.svg" src="_images/neuralnets_16_2.svg" /></div>
+<img alt="_images/neuralnets_22_2.png" src="_images/neuralnets_22_2.png" />
+</div>
+</div>
+<p>The neural net did a far better job at fitting a model to our data.</p>
+<div class="admonition-assignments-class-hint admonition">
+<p class="admonition-title">Assignments: :class: hint</p>
+<p>Individual – Reflect on the meaning of this illustration. What does it tell you about the strengths and risks of neural nets? :::</p>
+</div>
 </div>
 </div>
 
@@ -579,7 +638,7 @@ round=7 | MSE=0.09517
         
             &copy; Copyright 2021.<br/>
           <div class="extra_footer">
-            <li class="toc-logo"><a href="https://www.businessdatasolutions.nl/" target="blank"><img src="https://github.com/businessdatasolutions/pycourses/blob/main/logo-name.png?raw=true" width="200"></a></li>
+            <div class="toc-logo"><a href="https://www.businessdatasolutions.nl/" target="blank"><img src="https://github.com/businessdatasolutions/pycourses/blob/main/logo-name.png?raw=true" width="200"></a></div>
           </div>
       </p>
     </div>
